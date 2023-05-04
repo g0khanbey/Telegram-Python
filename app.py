@@ -21,7 +21,7 @@ zaman = time.strftime(" %d:%m:%Y %H:%M:%S")
 with open('token.txt', 'r') as f:
     TOKEN = f.read()
 
-def content1(update, market):
+def content1(update, bos):
 
 
 
@@ -64,7 +64,7 @@ def start(update, context):
 
 
     
-def content(update, kaynak):
+def content(update, hakkinda):
 
 #Gokhan Bey
 
@@ -79,8 +79,8 @@ disp = updater.dispatcher
 
 disp.add_handler(telegram.ext.CommandHandler("start", start))
 disp.add_handler(telegram.ext.CommandHandler("test", test))
-disp.add_handler(telegram.ext.CommandHandler("market", content1))
-disp.add_handler(telegram.ext.CommandHandler("kaynak", content))
+disp.add_handler(telegram.ext.CommandHandler("bos", content1))
+disp.add_handler(telegram.ext.CommandHandler("hakkinda", content))
 
 updater.start_polling()
 updater.idle()
